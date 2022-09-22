@@ -82,6 +82,10 @@ class AlgoModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMo
     } catch (e: GeneralSecurityException) {
       callback.invoke(e.message, null)
       e.printStackTrace()
+    } catch (e: Exception) {
+      callback.invoke(e.message, null)
+      println(e)
+      e.printStackTrace()
     }
   }
 
